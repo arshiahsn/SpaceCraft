@@ -152,7 +152,7 @@ namespace SpaceCraft
                     galaxy.systems[i].planets[j].structures[z].Pos = new Rectangle(rand.Next(100, 700), rand.Next(200, 500), 100, 100);
                 }
             //========================================================================================================================
-            //Initializing spaceship artibutes for their shop picture
+            //Initializing spaceship attributes for their shop picture
             for (int i = 0; i < kships.Length; i++)
             {
                 if (i < 4) kships[i].Pos = new Rectangle(200 * i, 300, 200, 100);
@@ -332,7 +332,7 @@ namespace SpaceCraft
                             if (galaxy.systems[j].planets[z].faction != galaxy.systems[j].planets[k].faction){flag = false; break;}
                     if (flag) galaxy.systems[j].faction = galaxy.systems[j].planets[0].faction;      
                     //============================================================================================================================
-                    //Showing artibutes for the planet when the mouse is on the planet position
+                    //Showing attributes for the planet when the mouse is on the planet position
                     if (galaxy.systems[j].planets[i].Pos.Contains(FirstMouse.X, FirstMouse.Y)
                     && galaxy.systems[j].SolarIsTrue == true)
                         galaxy.systems[j].planets[i].ShowArtibutes = true;
@@ -437,7 +437,7 @@ namespace SpaceCraft
                         if (galaxy.systems[j].planets[i].faction == Player.Faction.Romulan) galaxy.systems[j].planets[i].structbuttons[z / 2].Pic = Content.Load<Texture2D>("Pictures/Structures/k" + z.ToString());
                     }
                     //============================================================================================================================               
-                    //Structure Artibutes
+                    //Structure Attributes
                     for (int z = 0; z < 5; z++)
                     {
                         if (galaxy.systems[j].planets[i].structures[z].Pos.Contains(FirstMouse.X, LastMouse.Y))
@@ -752,7 +752,7 @@ namespace SpaceCraft
                         }
                                             if (galaxy.systems[i].planets[j].SSShopIstrue && galaxy.systems[i].planets[j].PlanetIsTrue)
                         {
-                            //Space Ship Artibutes
+                            //Space Ship Attributes
                             for (int z = 3; z >= 0; z--)
                             {
                                 spriteBatch.Draw(galaxy.systems[i].planets[j].FactoryButtons[z].pic, galaxy.systems[i].planets[j].FactoryButtons[z].rpos, Color.White * 0.8f);
@@ -778,7 +778,7 @@ namespace SpaceCraft
                                 spriteBatch.Draw(galaxy.systems[i].planets[j].FactoryButtons[z].pic, galaxy.systems[i].planets[j].FactoryButtons[z].rpos, Color.White*0.8f);
                             
                         }
-                        //Player Artibutes
+                        //Player Attributes
                         spriteBatch.DrawString(Font2, "Turrents " + galaxy.systems[i].planets[j].turrentnumber.ToString(), new Vector2(0, 30), Color.Orange);
                         spriteBatch.DrawString(Font2, "Refineries " + galaxy.systems[i].planets[j].refnumber.ToString(), new Vector2(0, 0), Color.Violet);
                         spriteBatch.DrawString(Font2, "Factories " + galaxy.systems[i].planets[j].facnumber.ToString(), new Vector2(0, 60), Color.Yellow);
